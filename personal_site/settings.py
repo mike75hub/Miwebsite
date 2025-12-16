@@ -27,7 +27,13 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
-
+ #Add Render domain automatically
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+ # Also allow localhost for development
+ALLOWED_HOSTS.extend(['localhost', '127.0.0.1'])
+# Application definition
 # Application definition
 
 INSTALLED_APPS = [
