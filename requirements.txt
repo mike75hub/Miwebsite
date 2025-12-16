@@ -39,8 +39,8 @@ scapy==2.6.1
 scikit-learn==1.7.2
 scipy==1.16.2
 seaborn==0.13.2
-setuptools==80.9.0
-simple-websocket==1.1.1
+setuptools==80.0.0
+simple-websocket>=1.0.0,<1.2.0
 six==1.17.0
 sqlparse==0.5.3
 threadpoolctl==3.6.0
